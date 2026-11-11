@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111b32" />
+    <meta name="description" content="A clear view of your inventory, stock activity, and business performance." />
+    <title>StockFlow — Inventory management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="StockFlow home" data-page="dashboard">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg></span>
+          <span>stock<span>flow</span></span>
+        </a>
+        <div class="workspace-switch"><span class="workspace-avatar">A</span><span class="workspace-copy"><strong>Acme Studio</strong><small>Business workspace</small></span><span class="switch-chevron">⌄</span></div>
+        <div class="nav-label">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-page="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+          <button class="nav-item" data-page="products"><span class="nav-icon">▦</span>Products<span class="nav-count" id="product-nav-count">0</span></button>
+          <button class="nav-item" data-page="categories"><span class="nav-icon">◫</span>Categories</button>
+          <button class="nav-item" data-page="stock"><span class="nav-icon">⇄</span>Stock management</button>
+          <button class="nav-item" data-page="suppliers"><span class="nav-icon">♧</span>Suppliers</button>
+          <button class="nav-item" data-page="reports"><span class="nav-icon">▤</span>Reports</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="nav-label">PREFERENCES</div>
+          <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Settings</button>
+          <div class="help-card"><span class="help-spark">✳</span><strong>Need a hand?</strong><p>Our team is here to help you get the most out of StockFlow.</p><a href="mailto:support@stockflow.example">Visit help center <span>↗</span></a></div>
+          <div class="profile"><span class="profile-avatar">JD</span><span class="profile-copy"><strong>Jordan Davis</strong><small>Workspace admin</small></span><button aria-label="Profile options" class="profile-more">···</button></div>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Dashboard</strong></div>
+          <div class="topbar-actions"><span class="today-label" id="today-label"></span><button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button><span class="top-avatar">JD</span></div>
+        </header>
+        <section class="page-content" id="page-content" aria-live="polite"></section>
+      </main>
+    </div>
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+    <div id="modal-root"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
